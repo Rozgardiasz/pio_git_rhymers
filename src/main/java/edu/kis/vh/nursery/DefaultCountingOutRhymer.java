@@ -7,7 +7,7 @@ public class DefaultCountingOutRhymer {
 
     private static final int MAX_SIZE = 12;
     private static final int EMPTY = -1;
-    private static final int FULL = 11;
+    private static final int FULL = MAX_SIZE -1;
     private final int[] numbers = new int[MAX_SIZE];
 
     public int getTotal() {
@@ -29,7 +29,7 @@ public class DefaultCountingOutRhymer {
         return total == FULL;
     }
 
-    protected int peekaboo() {
+    protected int peekaBoo() {
         if (callCheck())
             return EMPTY;
         return numbers[total];
